@@ -9,6 +9,7 @@ const routes: Routes = [
   { path: 'tasks', loadChildren: './tasks/tasks.module#TasksModule' },
   { path: 'books', loadChildren: './books/books.module#BooksModule' },
   { path: 'contact', loadChildren: './contact/contact.module#ContactModule' },
+  { path: '**', pathMatch: 'full', component: HomeComponent },
   { path: '', pathMatch: 'full', redirectTo: 'home' }
 ];
 
