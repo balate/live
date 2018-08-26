@@ -16,5 +16,6 @@ export class GreetComponent implements OnInit {
   btnRemove(ev){
   console.log(ev)
   this.usuario = "";
+  console.log("name udated")
   }
 }
