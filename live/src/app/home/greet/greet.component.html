@@ -14,6 +14,6 @@
         <button (click)="btnRemove($event)">Remove</button>
     </div>
     <div class="card-footer text-muted">
-        Hi! {{usuario}}
+        {{languages == 'en' ? 'Hola' : 'Hello'}} {{ usuario.toUpperCase() }}, you are the number {{2+5}}
     </div>
 </div>

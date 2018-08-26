@@ -8,10 +8,12 @@ import { Component, OnInit } from '@angular/core';
 export class GreetComponent implements OnInit {
 
   usuario : string;
+  languages : string;
   constructor() { }
 
   ngOnInit() {
     this.usuario = 'Javi Ocon'; 
+    this.languages = 'es';
   }
   btnRemove(ev){
   console.log(ev)
