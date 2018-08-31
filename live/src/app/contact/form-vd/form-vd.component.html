@@ -1,39 +1,39 @@
 <form>
     <!--Text-->
     <fieldset>
-        <legend>Datos del Usuario</legend>
+        <legend>User Data</legend>
         <!-- Etiqueta / Campo "Nombre" -->
         <div class="form-group row">
-            <label for="name" class="col-3">Nombre</label>
-            <input type="text" class="form-control col-9" name="name" id="name" required placeholder="Indica tu nombre (es obligatorio)">
+            <label for="name" class="col-3">Name</label>
+            <input type="text" class="form-control col-9" name="name" id="name" [(ngModel)]="contact.name" required placeholder="Indica tu nombre (es obligatorio)">
         </div>
         <!--Etiqueta / Campo "Apellidos"-->
         <div class="form-group row">
-            <label for="lastname" class="col-3">Apellidos</label>
-            <input type="text" class="form-control col-9" id="lastname" name="lastname" required placeholder="Indica tu apellido (es obligatorio)">
+            <label for="lastname" class="col-3">LastName</label>
+            <input type="text" class="form-control col-9" id="lastname" name="lastname" [(ngModel)]="contact.lastname" required placeholder="Indica tu apellido (es obligatorio)">
         </div>
         <!--Etiqueta / Campo "Correo"-->
         <div class="form-group row">
-            <label for="eMail" class="col-3">Correo</label>
-            <input type="email" class="form-control col-9" id="eMail" name="eMail" required placeholder="Indica tu email (es obligatorio)">
+            <label for="eMail" class="col-3">Email</label>
+            <input type="email" class="form-control col-9" id="eMail" name="eMail" [(ngModel)]="contact.email" required placeholder="Indica tu email (es obligatorio)">
         </div>
         <!--Etiqueta / Campo "Telefono"-->
         <div class="form-group row">
-            <label for="phoneNumber" class="col-3">Teléfono</label>
-            <input type="text" class="form-control col-9" id="phoneNumber" name="phoneNumber" required pattern="^[9|6]{1}([\d]{2}[-]*){3}[\d]{2}$" placeholder="9xx-xx-xx-xx (es obligatorio)">
+            <label for="phoneNumber" class="col-3">Phone</label>
+            <input type="text" class="form-control col-9" id="phoneNumber" name="phoneNumber" [(ngModel)]="contact.phoneNumber" required pattern="^[9|6]{1}([\d]{2}[-]*){3}[\d]{2}$" placeholder="9xx-xx-xx-xx (es obligatorio)">
         </div>
     </fieldset>
     <!--Select/options -->
     <fieldset class="form-group">
         <!--Etiqueta / Campo "Grupo"-->
-        <legend>Grupo</legend>
+        <legend>Group</legend>
         <div class="form-group row">
-            <select class="form-control" id="select" name="select"> 
-                <option>Familia</option>
-                <option>Amigos</option>
-                <option>Negocios</option>
-                <option>Trabajo</option>
-                <option>Otros</option>
+            <select class="form-control" id="grupo" name="grupo"> 
+                <option>Family</option>
+                <option>Friends</option>
+                <option>Bussines</option>
+                <option>Job</option>
+                <option>Others</option>
             </select>
         </div>
     </fieldset>
@@ -41,7 +41,7 @@
         <!--Radio-Buttos-->
         <fieldset class="form-group col">
             <!--Etiqueta / Campo "Sector laboral"-->
-            <legend>Sector laboral</legend>
+            <legend>Sector Jobs</legend>
             <div class="form-check">
                 <label class="form-check-label">
                     <input type="radio" class="form-check-input"
@@ -55,7 +55,7 @@
                     <input type="radio" class="form-check-input"
                         name ="sector" id="creativo" 
                         value="creativo">
-                    Creativo
+                    Creative
                 </label>
             </div>
             <div class="form-check">
@@ -71,37 +71,37 @@
                     <input type="radio" class="form-check-input"
                         name ="sector" id="otros" 
                         value="otros">
-                    Otros
+                    Others
                 </label>
             </div>
         </fieldset>
         <!--Checkbox-->
         <fieldset class="form-group col">
-            <legend>Aficiones</legend>
+            <legend>Hobbys</legend>
             <div class="form-check">
                 <label class="form-check-label">
                 <input type="checkbox"  class="form-check-input"
                     id="lectura" name="lectura">
-                    Lectura
+                    Read
                 </label>
             </div>
             <div class="form-check">
                 <label class="form-check-label">
                 <input type="checkbox"  class="form-check-input"
                     id="musica" name="musica"> 
-                    Música</label>
+                    Music</label>
             </div>
             <div class="form-check">
                 <label class="form-check-label">
                 <input type="checkbox"  class="form-check-input"
                     id="deporte" name="deporte"> 
-                    Deporte</label>
+                    Sport</label>
             </div>
             <div class="form-check">
                 <label class="form-check-label">
                 <input type="checkbox"  class="form-check-input"
                     id="viajar" name="viajar"> 
-                    Viajar</label>
+                    Travel</label>
             </div>
         </fieldset>
     </div>
@@ -114,3 +114,5 @@
             Borrar</button>
     </div>
 </form>
+
+{{contact | json}}
