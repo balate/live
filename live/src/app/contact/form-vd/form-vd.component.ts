@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Contacto } from '../../models/contacto.model';
 
 @Component({
   selector: 'kc-form-vd',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormVdComponent implements OnInit {
 
+  contact: Contacto;
+
   constructor() { }
 
   ngOnInit() {
+    this.contact = new Contacto();
   }
 
 }
