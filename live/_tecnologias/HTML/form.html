@@ -1,0 +1,117 @@
+<! DOCTYPE  html >
+< html lang=" en ">
+    < head>
+        < meta charset=" UTF-8 ">
+            < meta name=" viewport " content=" width = device-width, initial-scale = 1.0 ">
+                < meta http-equiv=" Compatible con X-UA " content=" ie = edge ">
+                    < title> Form Impresoras </ title>
+                    < link rel=" stylesheet " href=" ../../node_modules / bootstrap / dist / css / bootstrap.min.css ">
+                    </ head>
+                    < cuerpo>
+                        < div class=" contenedor ">
+                            < article class=" row ">
+                                < form class=" col-sm-6 ">
+                                    <! - Texto ->
+                                    < fieldset>
+                                        < leyenda> Datos del Usuario </ leyenda>
+                                        <! - Etiqueta / Campo "Nombre" ->
+                                        < div class=" fila del grupo de formulario ">
+                                            < label for=" name " class=" col-3 "> Nombre </ label>
+                                            < input type=" text " class=" form-control col-9 " name=" name " id=" name " requerido placeholder=" Indica tu nombre (es obligatorio) ">
+                                            </ div>
+                                            <! - Etiqueta / Campo "Apellidos" ->
+                                            < div class=" fila del grupo de formulario ">
+                                                < label for=" lastname " class=" col-3 "> Apellidos </ label>
+                                                < input type=" text " class=" form-control col-9 " id=" lastname " name=" lastname " required placeholder=" Indica tu apellido (es obligatorio) ">
+                                                </ div>
+                                                <! - Etiqueta / Campo "Correo" ->
+                                                < div class=" fila del grupo de formulario ">
+                                                    < label for=" eMail " class=" col-3 "> Correo </ label>
+                                                    < input type=" email " class=" form-control col-9 " id=" eMail " name=" eMail " requerido placeholder=" Indica tu email (es obligatorio) ">
+                                                    </ div>
+                                                    <! - Etiqueta / Campo "Telefono" ->
+                                                    < div class=" fila del grupo de formulario ">
+                                                        < label for=" phoneNumber " class=" col-3 "> Teléfono </ label>
+                                                        < input type=" text " class=" form-control col-9 " id=" phoneNumber " name=" phoneNumber " required pattern=" ^ [9 | 6] {1} ([\ d] {2} [-] *) {3} [\ d] {2} $ " placeholder=" 9xx-xx-xx-xx (es obligatorio) ">
+                                                        </ div>
+                                                    </ fieldset>
+                                                    <! - Seleccionar / opciones ->
+                                                    < fieldset class=" form-group ">
+                                                        <! - Etiqueta / Campo "Grupo" ->
+                                                        < leyenda> Grupo </ leyenda>
+                                                        < div class=" fila del grupo de formulario ">
+                                                            < select class=" form-control " id=" seleccionar " nombre=" seleccionar ">
+                                                                < option> Familia </ option>
+                                                                < opción> Amigos </ option>
+                                                                < option> Negocios </ option>
+                                                                < option> Trabajo </ option>
+                                                                < opción> Otros </ option>
+                                                            </ select>
+                                                        </ div>
+                                                    </ fieldset>
+                                                    < div class=" fila opcional ">
+                                                        <! - Radio-Buttos ->
+                                                        < fieldset class=" form-group col ">
+                                                            <! - Etiqueta / Campo "Sector laboral" ->
+                                                            < leyenda> Sector laboral </ leyenda>
+                                                            < div class=" form-check ">
+                                                                < label class=" form-check-label ">
+                                                                    < input type=" radio " class=" form-check-input " name=" sector " id=" tecnico " value=" tecnico ">
+                                                                        Técnico
+                                                                    </ label>
+                                                                </ div>
+                                                                < div class=" form-check ">
+                                                                    < label class=" form-check-label ">
+                                                                        < input type=" radio " class=" form-check-input " name=" sector " id=" creativo " value=" creativo ">
+                                                                            Creativo
+                                                                        </ label>
+                                                                    </ div>
+                                                                    < div class=" form-check ">
+                                                                        < label class=" form-check-label ">
+                                                                            < input type=" radio " class=" form-check-input " name=" sector " id=" comercial " value=" comercial ">
+                                                                                Comercial
+                                                                            </ label>
+                                                                        </ div>
+                                                                        < div class=" form-check ">
+                                                                            < label class=" form-check-label ">
+                                                                                < input type=" radio " class=" form-check-input " name=" sector " id=" otros " value=" otros ">
+                                                                                    Otros
+                                                                                </ label>
+                                                                            </ div>
+                                                                        </ fieldset>
+                                                                        <! - Casilla de verificación ->
+                                                                        < fieldset class=" form-group col ">
+                                                                            < leyenda> Aficiones </ legend>
+                                                                            < div class=" form-check ">
+                                                                                < label class=" form-check-label ">
+                                                                                    < input type=" checkbox " class=" form-check-input " id=" lectura " name=" lectura ">
+                                                                                        Lectura
+                                                                                    </ label>
+                                                                                </ div>
+                                                                                < div class=" form-check ">
+                                                                                    < label class=" form-check-label ">
+                                                                                        < input type=" checkbox " class=" form-check-input " id=" musica " name=" musica ">
+                                                                                            Música </ label>
+                                                                                    </ div>
+                                                                                    < div class=" form-check ">
+                                                                                        < label class=" form-check-label ">
+                                                                                            < input type=" checkbox " class=" form-check-input " id=" deporte " name=" deporte ">
+                                                                                                Deporte </ label>
+                                                                                        </ div>
+                                                                                        < div class=" form-check ">
+                                                                                            < label class=" form-check-label ">
+                                                                                                < input type=" checkbox " class=" form-check-input " id=" viajar " name=" viajar ">
+                                                                                                    Viajar </ label>
+                                                                                            </ div>
+                                                                                        </ fieldset>
+                                                                                    </ div>
+
+
+                                                                                    < div class=" fila del grupo de formulario ">
+                                                                                        < button type=" submit " class=" btn btn-primary mr-2 ">
+                                                                                            Enviar </ botón>
+                                                                                        < button type=" button " class=" btn btn-primary ">
+                                                                                            Borrar </ button>
+                                                                                    </ div>
+                                                                                </ form>
+                                                                            </ body>
